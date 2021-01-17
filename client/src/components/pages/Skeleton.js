@@ -21,6 +21,8 @@ class Skeleton extends Component {
   render() {
     return (
       <>
+        <nav class="navContainer">
+          <h1 class="navTitle"> WebsiteName
         {this.props.userId ? (
           <GoogleLogout
             clientId={GOOGLE_CLIENT_ID}
@@ -36,7 +38,19 @@ class Skeleton extends Component {
             onFailure={(err) => console.log(err)}
           />
         )}
-        <h1>Good luck on your project :)</h1>
+
+          </h1> 
+        </nav>
+        
+        <h1>Greetings! Do you...</h1>
+        <section class="u-textCenter">
+          <h4>Like shopping, but not the necessity of spending cash?</h4>
+          <h4>Like planning, but would rather not confine your time in rigid blocks? </h4>
+          <h4>Like to know where your time is going, but tracking it is a pain?</h4>
+        </section>
+        <h1>Great news! This site is for you :) </h1>
+
+        {/* <h1>Good luck on your project :)</h1>
         <h2> What we provide in this skeleton</h2>
         <ul>
           <li>Google Auth (Skeleton.js & auth.js)</li>
@@ -52,7 +66,7 @@ class Skeleton extends Component {
           <li>Change the Database Name for MongoDB (server.js)</li>
           <li>Add a favicon to your website at the path client/dist/favicon.ico</li>
           <li>Update website title in client/dist/index.html</li>
-        </ul>
+        </ul> */}
       </>
     );
   }
