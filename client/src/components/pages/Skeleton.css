@@ -1,3 +1,4 @@
+/* change name to NavBar.css */
 /* Fill me in :) */
 .NavBar-container {
     padding: var(--s) var(--m);
@@ -35,3 +36,4 @@
   .NavBar-link + .NavBar-link {
     margin-left: var(--m);
   }
+>>>>>>> 0b597b84843676d4deca501c8cb6c0197fadf374
