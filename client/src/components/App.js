@@ -4,6 +4,7 @@ import NotFound from "./pages/NotFound.js";
 
 // import NavBar from "./pages/NavBar.js"
 import Skeleton from "./pages/Skeleton.js";
+import Home from "./pages/Home.js";
 
 import "../utilities.css";
 
@@ -58,6 +59,7 @@ class App extends Component {
           />
           <NotFound default />
         </Router>
+        <Home />
       </>
     );
   }
