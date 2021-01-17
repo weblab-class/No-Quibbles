@@ -51,13 +51,13 @@ class Skeleton extends Component {
         </div>
         </nav>
 
-        <h1>Greetings! Do you...</h1>
+        {/* <h1>Greetings! Do you...</h1>
         <section class="u-textCenter">
           <h4>Like shopping, but not the necessity of spending cash?</h4>
           <h4>Like planning, but would rather not confine your time in rigid blocks? </h4>
           <h4>Like to know where your time is going, but tracking it is a pain?</h4>
         </section>
-        <h1>Great news! This site is for you :) </h1>
+        <h1>Great news! This site is for you :) </h1> */}
 
         {/* <h1>Good luck on your project :)</h1>
         <h2> What we provide in this skeleton</h2>
