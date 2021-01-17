@@ -8,6 +8,7 @@ import Home from "./pages/Home.js";
 import Profile from "./pages/Profile.js";
 
 import "../utilities.css";
+import "./App.css";
 
 import { socket } from "../client-socket.js";
 

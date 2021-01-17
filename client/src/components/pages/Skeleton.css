@@ -3,6 +3,8 @@
 .NavBar-container {
     padding: var(--s) var(--m);
     background-color: var(--transparent);
+    display: flex;
+    justify-content: space-between;
   }
   
   .NavBar-title {
