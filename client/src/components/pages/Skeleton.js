@@ -7,6 +7,9 @@ import "./Skeleton.css";
 //TODO: REPLACE WITH YOUR OWN CLIENT_ID
 const GOOGLE_CLIENT_ID = "121479668229-t5j82jrbi9oejh7c8avada226s75bopn.apps.googleusercontent.com";
 
+// TODO: Change name of file to NavBar.js
+// TODO: Change to NavBar
+
 class Skeleton extends Component {
   constructor(props) {
     super(props);
@@ -72,4 +75,5 @@ class Skeleton extends Component {
   }
 }
 
+// TODO: change to NavBar
 export default Skeleton;
