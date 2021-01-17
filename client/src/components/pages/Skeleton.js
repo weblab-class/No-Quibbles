@@ -4,8 +4,7 @@ import GoogleLogin, { GoogleLogout } from "react-google-login";
 import "../../utilities.css";
 import "./Skeleton.css";
 
-//TODO: REPLACE WITH YOUR OWN CLIENT_ID
-const GOOGLE_CLIENT_ID = "121479668229-t5j82jrbi9oejh7c8avada226s75bopn.apps.googleusercontent.com";
+const GOOGLE_CLIENT_ID = "868002205529-tj8jvfgtjitg8hqt15mjtnvhs8qc1sm7.apps.googleusercontent.com";
 
 // TODO: Change name of file to NavBar.js
 // TODO: Change to NavBar
@@ -23,28 +22,38 @@ class Skeleton extends Component {
 
   render() {
     return (
-      <>
-        <nav class="navContainer">
-          <h1 class="navTitle"> WebsiteName
-        {this.props.userId ? (
-          <GoogleLogout
-            clientId={GOOGLE_CLIENT_ID}
-            buttonText="Logout"
-            onLogoutSuccess={this.props.handleLogout}
-            onFailure={(err) => console.log(err)}
-          />
-        ) : (
-          <GoogleLogin
-            clientId={GOOGLE_CLIENT_ID}
-            buttonText="Login"
-            onSuccess={this.props.handleLogin}
-            onFailure={(err) => console.log(err)}
-          />
-        )}
-
-          </h1> 
+      <> 
+        <nav className="NavBar-container">
+        <div className="NavBar-title u-inlineBlock">WebsiteName</div>
+        <div className="NavBar-linkContainer u-inlineBlock">
+          {/* <Link to="/" className="NavBar-link">
+            Home
+          </Link>
+          {this.props.userId && (
+            <Link to={`/profile/${this.props.userId}`} className="NavBar-link">
+              Profile
+            </Link>
+          )} */}
+          {this.props.userId ? (
+            <GoogleLogout
+              clientId={GOOGLE_CLIENT_ID}
+              buttonText="Logout"
+              onLogoutSuccess={this.props.handleLogout}
+              onFailure={(err) => console.log(err)}
+              className="NavBar-link NavBar-login"
+            />
+          ) : (
+            <GoogleLogin
+              clientId={GOOGLE_CLIENT_ID}
+              buttonText="Login"
+              onSuccess={this.props.handleLogin}
+              onFailure={(err) => console.log(err)}
+              className="NavBar-link NavBar-login"
+            />
+          )}
+        </div>
         </nav>
-        
+
         <h1>Greetings! Do you...</h1>
         <section class="u-textCenter">
           <h4>Like shopping, but not the necessity of spending cash?</h4>

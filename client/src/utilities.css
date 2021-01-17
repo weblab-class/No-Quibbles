@@ -15,7 +15,7 @@
 */
 
 /* TODO: REPLACE WITH YOUR OWN FONT! */
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merienda+One&display=swap");
 
 :root {
   --primary: #396dff;
@@ -24,6 +24,7 @@
   --medgrey: #e0e0e0;
   --grey: #f7f7f7;
   --white: #fff;
+  --transparent: #ffffff00;
 
   --xs: 4px;
   --s: 8px;
@@ -34,7 +35,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Merienda One', cursive;
   font-weight: 300;
 }
 
