@@ -5,6 +5,7 @@ import NotFound from "./pages/NotFound.js";
 // import NavBar from "./pages/NavBar.js"
 import Skeleton from "./pages/Skeleton.js";
 import Home from "./pages/Home.js";
+import Profile from "./pages/Profile.js";
 
 import "../utilities.css";
 
@@ -50,16 +51,18 @@ class App extends Component {
   render() {
     return (
       <>
-        <Router>
-          <Skeleton
-            path="/"
+        <Skeleton
             handleLogin={this.handleLogin}
             handleLogout={this.handleLogout}
             userId={this.state.userId}
           />
-          <NotFound default />
-        </Router>
-        <Home />
+          <div className="App-container">
+            <Router>
+              <Home path="/" userId={this.state.userId} />
+              <Profile path="/profile/:userId" />
+              <NotFound default />
+            </Router>
+        </div>
       </>
     );
   }
