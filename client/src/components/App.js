@@ -7,6 +7,7 @@ import Skeleton from "./pages/Skeleton.js";
 import Home from "./pages/Home.js";
 
 import "../utilities.css";
+import "./App.css";
 
 import { socket } from "../client-socket.js";
 
@@ -50,6 +51,7 @@ class App extends Component {
   render() {
     return (
       <>
+      <div className="App-container">
         <Router>
           <Skeleton
             path="/"
@@ -60,6 +62,7 @@ class App extends Component {
           <NotFound default />
         </Router>
         <Home />
+      </div>
       </>
     );
   }

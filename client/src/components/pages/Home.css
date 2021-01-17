@@ -1,0 +1,15 @@
+/* .Home-container{
+    background-image: url("/client/dist/imgs/watercolor-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+} */
+
+html,
+body { 
+    background: url(/client/dist/imgs/watercolor-background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
