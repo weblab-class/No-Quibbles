@@ -59,7 +59,7 @@ class App extends Component {
           />
           <div className="App-container">
             <Router>
-              <Home path="/" userId={this.state.userId} />
+              <Home path="/"/>
               <Profile path="/profile/:userId" />
               <NotFound default />
             </Router>

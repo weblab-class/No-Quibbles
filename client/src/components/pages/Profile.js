@@ -1,7 +1,8 @@
 import React, {Component} from "react";
-
+import { get } from "../../utilities";
 import "../../utilities.css";
 import "./Profile.css";
+
 
 class Profile extends Component {
     constructor(props) {
@@ -18,10 +19,11 @@ class Profile extends Component {
   
     render() {
       if (!this.state.user) {
-        return <div> Loading...⏳ </div>;
+        return <div> Loading... ⏳ </div>;
       }
       return (
         <>
+
           <h1 className="Profile-name u-textCenter">{this.state.user.name}</h1>
           <hr className="Profile-line" />
           <div className="u-flex">
@@ -52,6 +54,7 @@ class Profile extends Component {
               <div id="previous-academics">focused?</div>
             </div>
             </div>
+            
         </>
       );
     }

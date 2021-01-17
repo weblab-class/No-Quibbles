@@ -22,6 +22,7 @@ class Skeleton extends Component {
       <> 
         <nav className="NavBar-container">
           <div className="NavBar-title u-inlineBlock">WebsiteName</div>
+          
           <div className="NavBar-linkContainer u-inlineBlock">
           {this.props.userId && (
             <Link to={`/profile/${this.props.userId}`} className="NavBar-link">
