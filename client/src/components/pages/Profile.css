@@ -23,3 +23,11 @@
     margin: var(--m) var(--s);
   }
   
+  /* html,
+  body { 
+      background: url(/client/dist/imgs/watercolor-background-eventsmall.jpg) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    } */

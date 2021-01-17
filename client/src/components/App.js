@@ -6,6 +6,7 @@ import NotFound from "./pages/NotFound.js";
 import Skeleton from "./pages/Skeleton.js";
 import Home from "./pages/Home.js";
 import Profile from "./pages/Profile.js";
+import EventsMall from "./pages/EventsMall.js";
 
 import "../utilities.css";
 import "./App.css";
@@ -62,6 +63,7 @@ class App extends Component {
               <Home path="/"/>
               <Profile path="/profile/:userId" />
               <NotFound default />
+              <EventsMall path="/eventsmall/:userId"/>
             </Router>
         </div>
       </>
