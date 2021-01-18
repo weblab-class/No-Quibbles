@@ -20,12 +20,58 @@ class EventsMall extends Component {
               <h1>Choose your events!</h1>
             </div>
 
-            <div ontouchstart="" id="eventsmall">
+            <div ontouchstart="" id="eventsmall" class="EventsMall-grid">
   
               {/* Wireframe 'sketch' buttons */}
-              <a href="#" class="btn"><span>Button</span></a>
-              <a href="#" class="btn"><span>Sketches</span></a>
+
+              <a href="#" class="btn" class="tooltip"><span>Event</span>
+                <div class="tooltiptext">Tags</div>
+              </a>
+
+              <a href="#" class="btn" class="tooltip"><span>Event</span>
+                <div class="tooltiptext">Tags</div>
+              </a>
+
+              <a href="#" class="btn" class="tooltip"><span>Event</span>
+                <div class="tooltiptext">Tags</div>
+              </a>
+
+              <a href="#" class="btn" class="tooltip"><span>Event</span>
+                <div class="tooltiptext">Tags</div>
+              </a>
+
+              <a href="#" class="btn" class="tooltip"><span>Event</span>
+                <div class="tooltiptext">Tags</div>
+              </a>
+
+              <a href="#" class="btn" class="tooltip"><span>Event</span>
+                <div class="tooltiptext">Tags</div>
+              </a>
+
+              <a href="#" class="btn" class="tooltip"><span>Event</span>
+                <div class="tooltiptext">Tags</div>
+              </a>
+
+              <a href="#" class="btn" class="tooltip"><span>Event</span>
+                <div class="tooltiptext">Tags</div>
+              </a>
+
+              <a href="#" class="btn" class="tooltip"><span>Event</span>
+                <div class="tooltiptext">Tags</div>
+              </a>
               
+              <a href="#" class="btn" class="tooltip"><span>Event</span>
+                <div class="tooltiptext">Tags</div>
+              </a>
+
+              <a href="#" class="btn" class="tooltip"><span>Event</span>
+                <div class="tooltiptext">Tags</div>
+              </a>
+
+              <a href="#" class="btn" class="tooltip"><span>Event</span>
+                <div class="tooltiptext">Tags</div>
+              </a>
+
             </div>
 
             </>
