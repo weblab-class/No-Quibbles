@@ -20,7 +20,8 @@ class EventsMall extends Component {
             <div class="Cart-container">
               <h1>Choose your events!</h1>
               <section ontouchstart="" id="eventsmall">
-              <a href={`/cart/${this.props.userId}`} class="btn"><span><img src="../../../client/dist/imgs/shopping-cart-icon.jpg" /></span></a>
+              {/* <a href={`/cart/${this.props.userId}`} class="btn"><span><img src="../../../client/dist/imgs/shopping-cart-icon.jpg" /></span></a> */}
+              <a href="/cart/" class="btn"><span><img src="../../../client/dist/imgs/shopping-cart-icon.jpg" /></span></a>
               </section>
             </div>
             <br></br>
