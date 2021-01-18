@@ -20,9 +20,6 @@ class NavBar extends Component {
         <nav className="NavBar-container">
           <div className="NavBar-title u-inlineBlock">WebsiteName</div>
           <div className="NavBar-linkContainer u-inlineBlock">
-          <Link to="/" className="NavBar-link">
-            Home
-          </Link>
 
           {this.props.userId && (
             <>
@@ -31,9 +28,6 @@ class NavBar extends Component {
               </Link>
               <Link to={"/eventsmall/"} className="NavBar-link">
                 EventsMall
-              </Link>
-              <Link to={"/cart/"} className="NavBar-link">
-                Cart
               </Link>
             </>
           )}
@@ -45,7 +39,7 @@ class NavBar extends Component {
               buttonText="Logout"
               onLogoutSuccess={this.props.handleLogout}
               onFailure={(err) => console.log(err)}
-              className="NavBar-link NavBar-login"
+              className="NavBar-login"
             />
             </Link>
           ) : (
