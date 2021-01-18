@@ -7,6 +7,10 @@ section {
     background-size: cover;
   } */
 
+.Cart-container{
+  display:flex;
+  justify-content: space-between;
+}
 
 /* _____________ */
 /* from codepen */
@@ -18,6 +22,7 @@ section {
   padding: 4em;
   background: #EEE;
 } */
+
 .EventsMall-grid{
   display: flex;
   justify-content: space-around;
@@ -62,20 +67,6 @@ section {
   box-shadow: 0 2px 0 #000;
   transition: padding 0.1s, box-shadow 0.1s, top 0.1s;
   /* background-image: url('/client/dist/imgs/font-bg-watercolor.png');  */
-}
-
-#eventsmall a:visited {
-	position: relative;
-	display: block;
-	width: 130px;
-	line-height: 30px;
-	text-align: right;
-	padding: 0 10px;
-	margin: 0;
-	border: 1px solid #666;
-	text-decoration: none;
-	font-size: 1em;
-	font-weight: bold;
 }
 
 /* _________________ */
