@@ -3,15 +3,12 @@ import { Link } from "@reach/router";
 import GoogleLogin, { GoogleLogout } from "react-google-login";
 
 import "../../utilities.css";
-import "./Skeleton.css";
+import "./NavBar.css";
 
 // This identifies your web application to Google's authentication service
 const GOOGLE_CLIENT_ID = "868002205529-tj8jvfgtjitg8hqt15mjtnvhs8qc1sm7.apps.googleusercontent.com";
 
-// TODO: Change name of file to NavBar.js
-// TODO: Change to NavBar
-
-class Skeleton extends Component {
+class NavBar extends Component {
   constructor(props) {
     super(props);
     // Initialize Default State
@@ -22,21 +19,27 @@ class Skeleton extends Component {
       <> 
         <nav className="NavBar-container">
           <div className="NavBar-title u-inlineBlock">WebsiteName</div>
-          
           <div className="NavBar-linkContainer u-inlineBlock">
-          {this.props.userId && (
-            <Link to={`/profile/${this.props.userId}`} className="NavBar-link">
-              Profile
-            </Link>
-          )}
+          <Link to="/" className="NavBar-link">
+            Home
+          </Link>
 
           {this.props.userId && (
-            <Link to={`/eventsmall/${this.props.userId}`} className="NavBar-link">
-              EventsMall
-            </Link>
+            <>
+              <Link to="/profile/" className="NavBar-link">
+                Profile
+              </Link>
+              <Link to={"/eventsmall/"} className="NavBar-link">
+                EventsMall
+              </Link>
+              <Link to={"/cart/"} className="NavBar-link">
+                Cart
+              </Link>
+            </>
           )}
 
           {this.props.userId ? (
+            <Link to="/" className="NavBar-link">
             <GoogleLogout
               clientId={GOOGLE_CLIENT_ID}
               buttonText="Logout"
@@ -44,6 +47,7 @@ class Skeleton extends Component {
               onFailure={(err) => console.log(err)}
               className="NavBar-link NavBar-login"
             />
+            </Link>
           ) : (
             <GoogleLogin
               clientId={GOOGLE_CLIENT_ID}
@@ -52,6 +56,7 @@ class Skeleton extends Component {
               onFailure={(err) => console.log(err)}
               className="NavBar-link NavBar-login"
             />
+
           )}
           </div>
         </nav>
@@ -60,5 +65,4 @@ class Skeleton extends Component {
   }
 }
 
-// TODO: change to NavBar
-export default Skeleton;
+export default NavBar;
