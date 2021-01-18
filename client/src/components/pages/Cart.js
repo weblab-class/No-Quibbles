@@ -11,6 +11,7 @@ class Cart extends Component {
     }
   
     componentDidMount() {
+      document.title = "Cart Page";
       // remember -- api calls go here!
     }
   
@@ -19,6 +20,7 @@ class Cart extends Component {
             <>
             <h1>you are towards checkout but not there</h1>
             <section ontouchstart="" id="eventsmall">
+              {/* <a href={`/checkout/${this.props.userId}`} class="btn"><span>Checkout</span></a> */}
               <a href="/checkout/" class="btn"><span>Checkout</span></a>
             </section>
             </>

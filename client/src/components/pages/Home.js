@@ -10,6 +10,7 @@ class Home extends Component {
     }
   
     componentDidMount() {
+        document.title = "Home Page";
       // remember -- api calls go here!
     }
   
