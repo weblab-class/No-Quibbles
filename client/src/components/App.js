@@ -65,7 +65,7 @@ class App extends Component {
               <Profile path="/profile/" userId = {this.state.userId} />
               <EventsMall path="/eventsmall/" />
               <Cart path="/cart/" />
-              <Checkout path="/checkout/" />
+              <Checkout path="/checkout/" userId = {this.state.userId} />
               <NotFound default />
             </Router>
         </div>

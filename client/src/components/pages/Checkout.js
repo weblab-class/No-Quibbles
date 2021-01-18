@@ -22,7 +22,7 @@ class Checkout extends Component {
             {/* <h1>you are now at checkout</h1> */}
             {/* <h2>Hi {this.state.user.name}, this is your checkout page</h2> */}
 
-            <link href='https://fonts.googleapis.com/css?family=Raleway:600,400' rel='stylesheet' type='text/css' />
+            {/* <link href='https://fonts.googleapis.com/css?family=Raleway:600,400' rel='stylesheet' type='text/css' /> */}
 
             <div class="receipt">
               
@@ -33,12 +33,12 @@ class Checkout extends Component {
                   </div>
                   <div class="header__meta">
                     <span class="header__date">25.04.2016</span>
-                    <span class="header__serial">0f-113</span>
-                    <span class="header__number">25042016</span>
+                    {/* <span class="header__serial">0f-113</span> */}
+                    {/* <span class="header__number">25042016</span> */}
                   </div>
                 </div>
                 <div class="header__greeting">
-                  <span class="header__name">Hi, Carlin</span>
+                  <span class="header__name">Hi, name</span>
                   <span class="header__count">You've purchased three (3) items in our store.</span>
                   <span class="header__border"></span>
                 </div>
@@ -72,6 +72,9 @@ class Checkout extends Component {
                 <div class="bar-code__code">
                   {/* <svg id="d17ac603-1444-403c-9daf-1afe6b3ad839" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 575.2 93.16"><defs><style>.\33 6de76d2-eb0f-431d-be12-6535d9fc4369,.\38 78966b7-abd4-4ef3-86d3-2321f80177f3,.b8e87e45-e06c-4d7b-92d7-30eed261c8dd,.e435b0ed-5ad4-4699-bad7-b1c15cfe3f86{fill:none;stroke:#000;stroke-miterlimit:10;}.\38 78966b7-abd4-4ef3-86d3-2321f80177f3{stroke-width:1.7px;}.e435b0ed-5ad4-4699-bad7-b1c15cfe3f86{stroke-width:3.7px;}.\33 6de76d2-eb0f-431d-be12-6535d9fc4369{stroke-width:7.7px;}.b8e87e45-e06c-4d7b-92d7-30eed261c8dd{stroke-width:5.7px;}</style></defs><title>Example_barcode</title><path class="878966b7-abd4-4ef3-86d3-2321f80177f3" d="M0.85,93.16V0m4,93.16V0m6,93.16V0"/><line class="e435b0ed-5ad4-4699-bad7-b1c15cfe3f86" x1="17.85" y1="93.16" x2="17.85"/><line class="36de76d2-eb0f-431d-be12-6535d9fc4369" x1="25.85" y1="93.16" x2="25.85"/><line class="878966b7-abd4-4ef3-86d3-2321f80177f3" x1="32.85" y1="93.16" x2="32.85"/><line class="b8e87e45-e06c-4d7b-92d7-30eed261c8dd" x1="40.85" y1="93.16" x2="40.85"/><line class="878966b7-abd4-4ef3-86d3-2321f80177f3" x1="46.85" y1="93.16" x2="46.85"/><line class="e435b0ed-5ad4-4699-bad7-b1c15cfe3f86" x1="51.85" y1="93.16" x2="51.85"/><path class="878966b7-abd4-4ef3-86d3-2321f80177f3" d="M60.85,93.16V0m10,93.16V0m4,93.16V0m6,93.16V0m8,93.16V0m4,93.16V0m4,93.16V0m4,93.16V0m6,93.16V0"/><line class="b8e87e45-e06c-4d7b-92d7-30eed261c8dd" x1="116.85" y1="93.16" x2="116.85"/><line class="878966b7-abd4-4ef3-86d3-2321f80177f3" x1="122.85" y1="93.16" x2="122.85"/><line class="b8e87e45-e06c-4d7b-92d7-30eed261c8dd" x1="130.85" y1="93.16" x2="130.85"/><line class="878966b7-abd4-4ef3-86d3-2321f80177f3" x1="138.85" y1="93.16" x2="138.85"/><path class="e435b0ed-5ad4-4699-bad7-b1c15cfe3f86" d="M143.85,93.16V0m8,93.16V0m6,93.16V0m6,93.16V0"/><path class="878966b7-abd4-4ef3-86d3-2321f80177f3" d="M170.85,93.16V0m6,93.16V0m8,93.16V0m4,93.16V0"/><path class="878966b7-abd4-4ef3-86d3-2321f80177f3" d="M193.85,93.16V0m4,93.16V0m6,93.16V0"/><line class="e435b0ed-5ad4-4699-bad7-b1c15cfe3f86" x1="210.85" y1="93.16" x2="210.85"/><line class="36de76d2-eb0f-431d-be12-6535d9fc4369" x1="218.85" y1="93.16" x2="218.85"/><line class="878966b7-abd4-4ef3-86d3-2321f80177f3" x1="225.85" y1="93.16" x2="225.85"/><line class="b8e87e45-e06c-4d7b-92d7-30eed261c8dd" x1="233.85" y1="93.16" x2="233.85"/><line class="878966b7-abd4-4ef3-86d3-2321f80177f3" x1="239.85" y1="93.16" x2="239.85"/><line class="e435b0ed-5ad4-4699-bad7-b1c15cfe3f86" x1="244.85" y1="93.16" x2="244.85"/><path class="878966b7-abd4-4ef3-86d3-2321f80177f3" d="M253.85,93.16V0m10,93.16V0m4,93.16V0m6,93.16V0m8,93.16V0m4,93.16V0m4,93.16V0m4,93.16V0m6,93.16V0"/><line class="b8e87e45-e06c-4d7b-92d7-30eed261c8dd" x1="309.85" y1="93.16" x2="309.85"/><line class="878966b7-abd4-4ef3-86d3-2321f80177f3" x1="315.85" y1="93.16" x2="315.85"/><line class="b8e87e45-e06c-4d7b-92d7-30eed261c8dd" x1="323.85" y1="93.16" x2="323.85"/><line class="878966b7-abd4-4ef3-86d3-2321f80177f3" x1="331.85" y1="93.16" x2="331.85"/><path class="e435b0ed-5ad4-4699-bad7-b1c15cfe3f86" d="M336.85,93.16V0m8,93.16V0m6,93.16V0m6,93.16V0"/><path class="878966b7-abd4-4ef3-86d3-2321f80177f3" d="M363.85,93.16V0m6,93.16V0m8,93.16V0m4,93.16V0"/><path class="878966b7-abd4-4ef3-86d3-2321f80177f3" d="M386.35,93.16V0m4,93.16V0m6,93.16V0"/><line class="e435b0ed-5ad4-4699-bad7-b1c15cfe3f86" x1="403.35" y1="93.16" x2="403.35"/><line class="36de76d2-eb0f-431d-be12-6535d9fc4369" x1="411.35" y1="93.16" x2="411.35"/><line class="878966b7-abd4-4ef3-86d3-2321f80177f3" x1="418.35" y1="93.16" x2="418.35"/><line class="b8e87e45-e06c-4d7b-92d7-30eed261c8dd" x1="426.35" y1="93.16" x2="426.35"/><line class="878966b7-abd4-4ef3-86d3-2321f80177f3" x1="432.35" y1="93.16" x2="432.35"/><line class="e435b0ed-5ad4-4699-bad7-b1c15cfe3f86" x1="437.35" y1="93.16" x2="437.35"/><path class="878966b7-abd4-4ef3-86d3-2321f80177f3" d="M446.35,93.16V0m10,93.16V0m4,93.16V0m6,93.16V0m8,93.16V0m4,93.16V0m4,93.16V0m4,93.16V0m6,93.16V0"/><line class="b8e87e45-e06c-4d7b-92d7-30eed261c8dd" x1="502.35" y1="93.16" x2="502.35"/><line class="878966b7-abd4-4ef3-86d3-2321f80177f3" x1="508.35" y1="93.16" x2="508.35"/><line class="b8e87e45-e06c-4d7b-92d7-30eed261c8dd" x1="516.35" y1="93.16" x2="516.35"/><line class="878966b7-abd4-4ef3-86d3-2321f80177f3" x1="524.35" y1="93.16" x2="524.35"/><path class="e435b0ed-5ad4-4699-bad7-b1c15cfe3f86" d="M529.35,93.16V0m8,93.16V0m6,93.16V0m6,93.16V0"/><path class="878966b7-abd4-4ef3-86d3-2321f80177f3" d="M556.35,93.16V0m6,93.16V0m8,93.16V0m4,93.16V0"/></svg> */}
                 </div>
+                {/* <div class="meter">
+                  <span style="width: 25%"></span>
+                </div>*/}
               </footer>
               
             </div>
@@ -79,7 +82,11 @@ class Checkout extends Component {
             {/* <a href="https://dribbble.com/shots/2738907-PayPal-Email-Receipt" target="_blank" class="link">Built from reference: Vladyslav Tyzun's Dribbble shot, completed for Awesomed</a> */}
 
             {/* <button class="button" type="button" onclick="restart()">Replay</button> */}
-
+            
+            {/* <br></br>
+            <div class="meter">
+                <span style="width: 25%"></span>
+            </div> */}
             </>
         );
     }
