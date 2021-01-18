@@ -17,22 +17,22 @@ class EventsMall extends Component {
     render() {
         return (
             <>
-            <div class="Cart-container">
+            <div className="Cart-container">
               <h1>Choose your events!</h1>
               <section ontouchstart="" id="eventsmall">
               <a href="/cart/" class="btn"><span><img src="../../../client/dist/imgs/shopping-cart-icon.jpg"/></span></a>
               </section>
             </div>
             <br></br>
-            <div ontouchstart="" id="eventsmall" class="EventsMall-grid">
+            <div ontouchstart="" id="eventsmall" className="EventsMall-grid">
   
               {/* Wireframe 'sketch' buttons */}
 
               <a href="#" class="btn" class="tooltip"><span>Event</span>
-                <div class="tooltiptext">Tags</div>
+                <div className="tooltiptext">Tags</div>
               </a>
 
-              <a href="#" class="btn" class="tooltip"><span>Event</span>
+              {/* <a href="#" class="btn" class="tooltip"><span>Event</span>
                 <div class="tooltiptext">Tags</div>
               </a>
 
@@ -74,7 +74,7 @@ class EventsMall extends Component {
 
               <a href="#" class="btn" class="tooltip"><span>Event</span>
                 <div class="tooltiptext">Tags</div>
-              </a>
+              </a> */}
 
             </div>
 
