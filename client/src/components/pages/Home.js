@@ -16,7 +16,7 @@ class Home extends Component {
     render() {
         return (
             <>
-            <body>
+            <body id="home">
                 <section class="u-textCenter">
                     <h1>Greetings! Do you...</h1>
                 </section>
@@ -28,7 +28,6 @@ class Home extends Component {
                 <section class="u-textCenter">
                     <h1>Then you've come to the right place! :) </h1>
                 </section>
-                
             </body>
             </>
         );

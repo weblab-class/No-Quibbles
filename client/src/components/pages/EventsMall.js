@@ -19,6 +19,15 @@ class EventsMall extends Component {
             <div>
               <h1>Choose your events!</h1>
             </div>
+
+            <div ontouchstart="" id="eventsmall">
+  
+              {/* Wireframe 'sketch' buttons */}
+              <a href="#" class="btn"><span>Button</span></a>
+              <a href="#" class="btn"><span>Sketches</span></a>
+              
+            </div>
+
             </>
         );
     }

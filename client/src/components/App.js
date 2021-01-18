@@ -60,7 +60,7 @@ class App extends Component {
           />
           <div className="App-container">
             <Router>
-              <Home path="/"/>
+                <Home path="/" />
               <Profile path="/profile/:userId" />
               <NotFound default />
               <EventsMall path="/eventsmall/:userId"/>

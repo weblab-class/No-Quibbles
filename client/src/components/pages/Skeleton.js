@@ -29,6 +29,13 @@ class Skeleton extends Component {
               Profile
             </Link>
           )}
+
+          {this.props.userId && (
+            <Link to={`/eventsmall/${this.props.userId}`} className="NavBar-link">
+              EventsMall
+            </Link>
+          )}
+
           {this.props.userId ? (
             <GoogleLogout
               clientId={GOOGLE_CLIENT_ID}

@@ -23,6 +23,7 @@ class Profile extends Component {
       }
       return (
         <>
+        <body id="profile">
         {/* <body> */}
           <h1 className="Profile-name u-textCenter">{this.state.user.name}</h1>
           <hr className="Profile-line" />
@@ -54,7 +55,7 @@ class Profile extends Component {
               <div id="previous-academics">focused?</div>
             </div>
             </div>
-          {/* </body> */}
+          </body>
         </>
       );
     }

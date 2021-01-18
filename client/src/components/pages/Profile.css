@@ -24,7 +24,7 @@
   }
   
   /* html,
-  body { 
+  body#profile { 
       background: url(/client/dist/imgs/watercolor-background-eventsmall.jpg) no-repeat center center fixed; 
       -webkit-background-size: cover;
       -moz-background-size: cover;
