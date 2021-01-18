@@ -12,7 +12,6 @@ class EventsMall extends Component {
     componentDidMount() {
       document.title = "Events Mall Page";
       // remember -- api calls go here!
-      document.title = "Events Mall";
     }
   
     render() {
