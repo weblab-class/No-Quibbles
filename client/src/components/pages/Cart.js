@@ -11,6 +11,7 @@ class Cart extends Component {
     }
   
     componentDidMount() {
+      document.title = "Cart Page";
       // remember -- api calls go here!
     }
   
