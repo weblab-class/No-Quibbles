@@ -17,7 +17,7 @@ Time budgeter: (turns to look directly at the camera) Fifteen minutes could save
 (Screen abruptly cuts to black as if camera was snatched away)
 
 ## Pitch v.3 - the TL;DR 
-Website where you spend time quite literally to buy things on your potential to-do list. Has added bonus of telling you how much happiness you're --giving up-- generating from doing these tasks.  
+Website where you spend time quite literally to buy things on your potential to-do list. Has added bonus of telling you how much happiness you're ~~giving up~~ generating from doing these tasks.  
 
 ### BEHIND THE SCENES
 - A user can create customized event templates and tag them with the tags they see fit. The tags are provided by the website and are sorted into the following categories: Health, Social Connections, and Academics (predetermined by us -- yup, not black box at all) , with the overall Happiness score calculated from these results. 
