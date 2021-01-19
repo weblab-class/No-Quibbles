@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { get } from "../../utilities";
 import "../../utilities.css";
 import "./Cart.css";
 import "./EventsMall.css";
@@ -18,10 +19,10 @@ class Cart extends Component {
       get(`/api/user`).then((user) => this.setState({ user: user }));
     }
 
-    emptyCart = () => {
+    emptyCart(user) {
         const num = user.all_eventids.length;
         let new_cart = [];
-        for (x = 0; x < num; x++){
+        for (let x = 0; x < num; x++){
           new_cart.push(false)
         } 
         user.cart = new_cart;

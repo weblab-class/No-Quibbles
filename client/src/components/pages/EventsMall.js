@@ -21,9 +21,9 @@ class EventsMall extends Component {
       get(`/api/user`).then((user) => this.setState({ user: user }));
     }
 
-    addToCart = (ind, user) => {
+    addToCart(ind, user) {
       user.cart[ind] = True;
-    };
+    }
 
     render() {
         return (
