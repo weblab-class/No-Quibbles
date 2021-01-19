@@ -12,7 +12,7 @@ const express = require("express");
 // import models so we can interact with the database
 const User = require("./models/user");
 const Event = require("./models/event");
-const Tag = require("./models/tag");
+// const Tag = require("./models/tag");
 
 // import authentication library
 const auth = require("./auth");
@@ -52,40 +52,41 @@ router.get("/user", (req, res) => {
   });
 });
 
-// get all events 
-router.get("/events", (req, res) => {
+// find an event from id
+router.get("/event", (req, res) => {
   // empty selector means get all documents 
-  Event.find({}).then((events) => res.send(events));
+  Event.findById(req.event._id).then((event) => res.send(event));
 });
 
 // post particular event
-router.post("/event", auth.ensureLoggedIn, (req, res) => {
-  const newEvent = new Event({
-    creator_id: req.user._id,
-    creator_name: req.user.name,
-    event_name: req.body.content,
-  });
+// router.post("/event", auth.ensureLoggedIn, (req, res) => {
+//   const newEvent = new Event({
+//     creator_id: req.user._id,
+//     creator_name: req.user.name,
+//     event_name: req.body.content,
+//   });
 
-  newEvent.save().then((event) => res.send(event));
-});
+//   newEvent.save().then((event) => res.send(event));
+// });
 
 // get tags associated with event
-router.get("/tag", (req, res) => {
-  Tag.find({ parent: req.query.parent }).then((tags) => {
-    res.send(tags);
-  });
-});
+// router.get("/tag", (req, res) => {
+//   Tag.find({ parent: req.query.parent }).then((tags) => {
+//     res.send(tags);
+//   });
+// });
 
-router.post("/tag", auth.ensureLoggedIn, (req, res) => {
-  const newTag = new Tag({
-    // parent event
-    parent: req.body.parent,
+// custom user tags
+// router.post("/tag", auth.ensureLoggedIn, (req, res) => {
+//   const newTag = new Tag({
+//     // parent event
+//     parent: req.body.parent,
 
-    content: req.body.content,
-  });
+//     content: req.body.content,
+//   });
 
-  newTag.save().then((tag) => res.send(tag));
-});
+//   newTag.save().then((tag) => res.send(tag));
+// });
 
 
 // anything else falls to this "not found" case

@@ -8,13 +8,20 @@ class EventsMall extends Component {
     constructor(props) {
       super(props);
       // Initialize Default State
-      this.state = {};
+      this.state = {
+        user: {name: "dummy"},
+      };
     }
   
     componentDidMount() {
       document.title = "Events Mall Page";
       // remember -- api calls go here!
+      get(`/api/user`).then((user) => this.setState({ user: user }));
     }
+
+    addToCart = (ind, user) => {
+      user.cart[ind] = True;
+    };
   
     render() {
         return (
