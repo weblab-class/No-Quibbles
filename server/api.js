@@ -33,7 +33,7 @@ router.get("/whoami", (req, res) => {
 });
 
 router.get("/user", (req, res) => {
-  User.findById(req.query.userid).then((user) => {
+  User.findById(req.user._id).then((user) => {
     res.send(user);
   });
 });

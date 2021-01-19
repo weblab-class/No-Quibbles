@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../../utilities.css";
 import "./EventsMall.css";
+import carticon from "../../../dist/imgs/shopping-cart-icon.jpg"
 
 class EventsMall extends Component {
     constructor(props) {
@@ -19,9 +20,12 @@ class EventsMall extends Component {
             <>
             <div className="Cart-container">
               <h1>Choose your events!</h1>
-              <section ontouchstart="" id="eventsmall">
-              <a href="/cart/" class="btn"><span><img src="../../../client/dist/imgs/shopping-cart-icon.jpg"/></span></a>
+              <section ontouchStart="" id="eventsmall">
+              {/* <a href="/cart/" className="btn"><span><img src="../../../../dist/imgs/shopping-cart-icon.jpg" /></span></a> */}
+              
+              <a href="/cart/" className="btn"><span><img src={carticon} /></span></a>
               </section>
+              
             </div>
             <br></br>
             <div ontouchstart="" id="eventsmall" className="EventsMall-grid">

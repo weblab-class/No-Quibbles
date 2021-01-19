@@ -14,7 +14,7 @@ class Profile extends Component {
   
     componentDidMount() {
       document.title = "Profile Page";
-      get(`/api/user`, { userid: this.props.userId }).then((user) => this.setState({ user: user }));
+      get(`/api/user`).then((user) => this.setState({ user: user }));
     }
   
     render() {
@@ -24,7 +24,6 @@ class Profile extends Component {
       return (
         <>
         <body id="profile">
-        {/* <body> */}
           <h1 className="Profile-name u-textCenter">{this.state.user.name}</h1>
           <hr className="Profile-line" />
           <div className="u-flex">
