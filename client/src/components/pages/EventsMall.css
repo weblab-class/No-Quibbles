@@ -12,6 +12,11 @@ section {
   justify-content: space-between;
 }
 
+.Checkout-container{
+  display:flex;
+  justify-content: flex-end;
+}
+
 /* _____________ */
 /* from codepen */
 

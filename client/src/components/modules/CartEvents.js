@@ -18,11 +18,25 @@ class CartEvents extends Component {
   
     render() {
       return (
-        <div className="CartEvents-container">
-          <div className="Cart-event">
-            <h1>{this.props.cartEvents[0]}</h1>
-          </div>
+          <>
+        <div>
+            
+
+          <div className="CartEvents-container u-flexColumn">
+              <div className="Cart-event u-flex-alignCenter"><label for="event-select u-flex-alignCenter">Add to cart:</label>
+              <br></br>
+              <select id="event-select">
+              {this.props.cartEvents.map((x, i) => <option key={i}>{x}</option>
+              )}
+              </select>
+              <br></br>
+              Time to spend: 
+              <br></br>
+              <input type="text"/>
+              </div>
+            </div> 
         </div>
+        </>
       );
     }
   }

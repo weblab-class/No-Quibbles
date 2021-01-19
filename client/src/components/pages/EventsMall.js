@@ -44,9 +44,9 @@ class EventsMall extends Component {
               <a href="#" className="btn"><span>Add Event to DB</span></a>
               </section> */}
 
-              <section id="eventsmall">
+              {/* <section id="eventsmall">
               <a href="/cart/" className="btn"><span><img src={carticon} /></span></a>
-              </section>
+              </section> */}
 
             </div>
             <br></br>
@@ -55,13 +55,29 @@ class EventsMall extends Component {
   
               {/* Wireframe 'sketch' buttons */}
 
-              <a href="#" className="btn" className="tooltip" onClick= {() => this.addToCart("event0")}><span>Event0</span>
+              <a href="#" className="btn" className="tooltip" onClick= {() => this.addToCart(" Pset Night ")}><span>Pset Night</span>
+                <div className="tooltiptext">Tags</div>
+              </a>
+
+              <a href="#" className="btn" className="tooltip" onClick= {() => this.addToCart(" Office Hours ")}><span>Office Hours</span>
+                <div className="tooltiptext">Tags</div>
+              </a>
+
+              <a href="#" className="btn" className="tooltip" onClick= {() => this.addToCart(" Grocery Run ")}><span>Grocery Run</span>
                 <div className="tooltiptext">Tags</div>
               </a>
               
               <CartEvents cartEvents={this.state.events_chosen} />
 
+              <br></br>
+              
             </div>
+            <div className="Checkout-container">
+                <section ontouchstart="" id="eventsmall">
+                {/* <a href={`/checkout/${this.props.userId}`} class="btn"><span>Checkout</span></a> */}
+                <a href="/checkout/" className="btn"><span>Checkout</span></a>
+                </section>
+              </div>
 
             </>
         );
