@@ -58,16 +58,15 @@ router.get("/event", (req, res) => {
   Event.findById(req.event._id).then((event) => res.send(event));
 });
 
-// post particular event
-// router.post("/event", auth.ensureLoggedIn, (req, res) => {
-//   const newEvent = new Event({
-//     creator_id: req.user._id,
-//     creator_name: req.user.name,
-//     event_name: req.body.content,
-//   });
+//create custom event
+router.post("/event", auth.ensureLoggedIn, (req, res) => {
+  const newEvent = new Event({
+    name: req.name,
+    tagnames: req.tags,
+  });
 
-//   newEvent.save().then((event) => res.send(event));
-// });
+  newEvent.save().then((event) => res.send(event));
+});
 
 // get tags associated with event
 // router.get("/tag", (req, res) => {
