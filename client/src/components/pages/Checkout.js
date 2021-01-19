@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { get } from "../../utilities";
 import "../../utilities.css";
 import "./Checkout.css";
+import "./EventsMall.css";
 
 class Checkout extends Component {
     constructor(props) {
@@ -19,7 +20,15 @@ class Checkout extends Component {
     render() {
         return (
             <>
-            <h1 className="u-flex-alignCenter">Checkout complete - thanks for shopping!</h1>
+            <div className="Cart-container">
+              <h1>Checkout complete - thanks for shopping!</h1>
+              <section ontouchStart="" id="eventsmall">
+              <a href="/eventsmall/" className="btn"><span>Continue Shopping</span></a>
+              </section>
+              
+            </div>
+            <br></br>
+
             {/* <link href='https://fonts.googleapis.com/css?family=Raleway:600,400' rel='stylesheet' type='text/css' /> */}
 
             <div className="receipt">

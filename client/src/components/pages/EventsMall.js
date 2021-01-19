@@ -25,7 +25,6 @@ class EventsMall extends Component {
             <div className="Cart-container">
               <h1>Choose your events!</h1>
               <section ontouchStart="" id="eventsmall">
-              
               <a href="/cart/" className="btn"><span><img src={carticon} /></span></a>
               </section>
               
