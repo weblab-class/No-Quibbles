@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Router } from "@reach/router";
 import NotFound from "./pages/NotFound.js";
 
-import NavBar from "./pages/NavBar.js"
+import NavBar from "./modules/NavBar.js"
 import Home from "./pages/Home.js";
 import Profile from "./pages/Profile.js";
 import EventsMall from "./pages/EventsMall.js";
