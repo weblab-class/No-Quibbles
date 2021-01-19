@@ -19,7 +19,7 @@ class Checkout extends Component {
     render() {
         return (
             <>
-            <h1>you are now at checkout</h1>
+            <h1 className="u-flex-alignCenter">Checkout complete - thanks for shopping!</h1>
             {/* <link href='https://fonts.googleapis.com/css?family=Raleway:600,400' rel='stylesheet' type='text/css' /> */}
 
             <div className="receipt">
@@ -47,22 +47,22 @@ class Checkout extends Component {
                   <h2 className="cart__header">Cart:</h2>
                   <ol className="list">
                     <li className="list__item">
-                      <span className="list__name">Lacoste t-shirt</span>
-                      <span className="list__price">$48.00</span>
+                      <span className="list__name">Pset Night</span>
+                      <span className="list__price">05:00</span>
                     </li>
                     <li class="list__item">
-                      <span class="list__name">Nike sweatpants</span>
-                      <span class="list__price">$125.00</span>
+                      <span class="list__name">Office Hours</span>
+                      <span class="list__price">02:00</span>
                     </li>
                     <li class="list__item">
-                      <span class="list__name">Converse All-Stars</span>
-                      <span class="list__price">$95.00</span>
+                      <span class="list__name">Grocery Run</span>
+                      <span class="list__price">01:30</span>
                     </li>
                   </ol>	
                   <hr className="cart__hr" />
                   <footer className="cart__total">
                     <h3 className="cart__total-label">Total</h3>
-                    <span className="cart__total-price">$268.00</span>				
+                    <span className="cart__total-price">08:30</span>				
                   </footer>
               </section>
               

@@ -32,6 +32,7 @@ router.get("/whoami", (req, res) => {
   res.send(req.user);
 });
 
+// instead of querying every time, just find 
 router.get("/user", (req, res) => {
   User.findById(req.user._id).then((user) => {
     res.send(user);

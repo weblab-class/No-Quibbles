@@ -18,7 +18,7 @@ class NavBar extends Component {
     return (
       <> 
         <nav className="NavBar-container">
-          <div className="NavBar-title u-inlineBlock">WebsiteName</div>
+          <div className="NavBar-title u-inlineBlock">No (Quibbles with) Time</div>
           <div className="NavBar-linkContainer u-inlineBlock">
 
           {this.props.userId && (

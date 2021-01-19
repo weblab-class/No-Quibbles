@@ -27,32 +27,48 @@ class Profile extends Component {
           <h1 className="Profile-name u-textCenter">{this.state.user.name}</h1>
           <hr className="Profile-line" />
           <div className="u-flex">
+
             <div className="Profile-subContainer u-textCenter">
               <h3 className="Profile-subTitle">My Shopping History 🛒</h3>
               <div id="profile-description">
                 It's so lonely in here... go budget your day! ⏱️
               </div>
             </div>
+            
+            <div className="Profile-statsContainer">
+
             <div className="Profile-subContainer u-textCenter">
               <h4 className="Profile-subTitle">My Stats</h4>
-              <div id="previous-stats">Are you any of the things below? Start shopping to find out!</div>
+              <div className="Profile-description u-textCenter">Are you any of the things below? Start shopping to find out!</div>
             </div>
-            <div className="Profile-subContainer u-textCenter">
-              <h4 className="Profile-subTitle">My Happiness</h4>
-              <div id="previous-happiness">happy?</div>
+
+            <div className="Profile-substatsContainer">
+
+              <div className="Profile-subContainer">
+                <h4 className="Profile-statsTitle u-textCenter">My Happiness</h4>
+                <div className="Profile-description u-textCenter">happy?</div>
+              </div>
+
+              <div className="Profile-subContainer">
+                <h4 className="Profile-statsTitle u-textCenter">My Wellbeing</h4>
+                <div className="Profile-description u-textCenter">healthy?</div>
+              </div>
             </div>
-            <div className="Profile-subContainer u-textCenter">
-              <h4 className="Profile-subTitle">My Health</h4>
-              <div id="previous-health">healthy?</div>
+
+            <div className="Profile-substatsContainer">
+              <div className="Profile-subContainer">
+                <h4 className="Profile-statsTitle u-textCenter">My Connections</h4>
+                <div className="Profile-description u-textCenter">connected?</div>
+              </div>
+
+              <div className="Profile-subContainer">
+                <h4 className="Profile-statsTitle u-textCenter">My Academics</h4>
+                <div className="Profile-description u-textCenter">focused?</div>
+              </div>
+
+              </div>
             </div>
-            <div className="Profile-subContainer u-textCenter">
-              <h4 className="Profile-subTitle">My Connections</h4>
-              <div id="previous-connections">connected?</div>
-            </div>
-            <div className="Profile-subContainer u-textCenter">
-              <h4 className="Profile-subTitle">My Academics</h4>
-              <div id="previous-academics">focused?</div>
-            </div>
+
             </div>
           </body>
         </>
