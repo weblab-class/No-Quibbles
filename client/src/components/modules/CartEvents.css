@@ -1,0 +1,23 @@
+.CartEvents-container {
+    border: var(--darkgrey) 1px solid;
+    border-radius: var(--xs);
+    background-color: black;
+    display: flex;
+    /* margin-top: var(--m); */
+  }
+  
+  /* .CatHappiness-container:first-of-type {
+    margin-top: var(--l);
+  } */
+  
+  .Cart-event {
+    /* padding: var(--m) var(--l); */
+    font-size: 40 px;
+    color: black;
+  }
+  
+  /* .CatHappiness-storyContent {
+    font-size: 40px;
+    margin: var(--s) 0 0;
+  }
+   */

@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import { get } from "../../utilities";
 import "../../utilities.css";
 import "./Profile.css";
+// import CatHappiness from "../modules/CatHappiness.js";
+
 
 
 class Profile extends Component {
@@ -9,6 +11,7 @@ class Profile extends Component {
       super(props);
       this.state = {
         user: undefined,
+        // catHappiness: 0,
       };
     }
   
