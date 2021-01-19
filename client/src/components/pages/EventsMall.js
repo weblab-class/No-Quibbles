@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { get } from "../../utilities";
 import "../../utilities.css";
 import "./EventsMall.css";
 // import an image path instead of specifying it directly in html
@@ -9,27 +10,38 @@ class EventsMall extends Component {
       super(props);
       // Initialize Default State
       this.state = {
-        // user: {name: "dummy"},
+        user: {name: "dummy"},
+        events: undefined,
       };
     }
   
     componentDidMount() {
       document.title = "Events Mall Page";
       // remember -- api calls go here!
-      // get(`/api/user`).then((user) => this.setState({ user: user }));
+      get(`/api/user`).then((user) => this.setState({ user: user }));
     }
-  
+
+    addToCart = (ind, user) => {
+      user.cart[ind] = True;
+    };
+
     render() {
         return (
             <>
             <div className="Cart-container">
               <h1>Choose your events!</h1>
+
+              <section ontouchStart="" id="eventsmall">
+              <a href="#" className="btn"><span>Add Event to DB</span></a>
+              </section>
+
               <section ontouchStart="" id="eventsmall">
               <a href="/cart/" className="btn"><span><img src={carticon} /></span></a>
               </section>
-              
+
             </div>
             <br></br>
+
             <div ontouchstart="" id="eventsmall" className="EventsMall-grid">
   
               {/* Wireframe 'sketch' buttons */}

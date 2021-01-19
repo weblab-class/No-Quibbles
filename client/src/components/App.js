@@ -51,21 +51,6 @@ class App extends Component {
     post("/api/logout");
   };
 
-  addToCart = (ind) => {
-    get(`/api/user`).then((user) => user.cart[ind] = True);
-  };
-
-  emptyCart = () => {
-    get(`/api/user`).then((user) => {
-      const num = user.all_eventids.length;
-      let new_cart = [];
-      for (x = 0; x < num; x++){
-        new_cart.push(false)
-      } 
-      user.cart = new_cart;
-    })
-  }
-
   render() {
     return (
       <>
@@ -78,8 +63,8 @@ class App extends Component {
             <Router>
               <Home path="/" />
               <Profile path="/profile/" userId = {this.state.userId} />
-              <EventsMall path="/eventsmall/" funcAddToCart = {this.addToCart} />
-              <Cart path="/cart/" funcEmptyCart = {this.emptyCart}/>
+              <EventsMall path="/eventsmall/" userId = {this.state.userId} />
+              <Cart path="/cart/" userId = {this.state.userId} />
               <Checkout path="/checkout/" userId = {this.state.userId} />
               <NotFound default />
             </Router>

@@ -7,12 +7,24 @@ class Cart extends Component {
     constructor(props) {
       super(props);
       // Initialize Default State
-      this.state = {};
+      this.state = {
+        user: {name: "dummy"},
+      };
     }
   
     componentDidMount() {
       document.title = "Cart Page";
       // remember -- api calls go here!
+      get(`/api/user`).then((user) => this.setState({ user: user }));
+    }
+
+    emptyCart = () => {
+        const num = user.all_eventids.length;
+        let new_cart = [];
+        for (x = 0; x < num; x++){
+          new_cart.push(false)
+        } 
+        user.cart = new_cart;
     }
   
     render() {
