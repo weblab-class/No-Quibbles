@@ -51,6 +51,10 @@ class App extends Component {
     post("/api/logout");
   };
 
+  addToCart = (ind) => {
+    get(`/api/user`).then((user) => user.cart[ind] = True);
+  };
+
   render() {
     return (
       <>
@@ -63,7 +67,7 @@ class App extends Component {
             <Router>
               <Home path="/" />
               <Profile path="/profile/" userId = {this.state.userId} />
-              <EventsMall path="/eventsmall/" userId = {this.state.userId} />
+              <EventsMall path="/eventsmall/" funcAddToCart = {this.addToCart} />
               <Cart path="/cart/" />
               <Checkout path="/checkout/" userId = {this.state.userId} />
               <NotFound default />
