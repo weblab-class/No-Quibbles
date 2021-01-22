@@ -15,11 +15,13 @@ class Checkout extends Component {
     componentDidMount() {
         document.title = "Checkout Page";
         get(`/api/user`).then((user) => this.setState({ user: user }));
+        //get('/api/cart')
     }
   
     render() {
         return (
             <>
+            {console.log(this.state.user.cart)}
             <div className="Cart-container">
               <h1>Checkout complete - thanks for shopping!</h1>
               <section ontouchStart="" id="eventsmall">

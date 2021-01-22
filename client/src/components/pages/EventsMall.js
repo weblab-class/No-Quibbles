@@ -67,12 +67,12 @@ class EventsMall extends Component {
               <br></br>
               
             </div>
-            <div className="Checkout-container">
+            
+            {/* <div className="Checkout-container">
                 <section ontouchstart="" id="eventsmall">
-                {/* <a href={`/checkout/${this.props.userId}`} class="btn"><span>Checkout</span></a> */}
                 <a href="/checkout/" className="btn"><span>Checkout</span></a>
                 </section>
-              </div>
+            </div> */}
 
             </>
         );

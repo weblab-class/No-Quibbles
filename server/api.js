@@ -62,9 +62,10 @@ router.post("/additem", auth.ensureLoggedIn, (req, res) => {
       user.save().then((updatedUser) => res.send({user: updatedUser, item: item}));
     })
     // will throw error at .save if Schema type not met
-    // except when req.body is undefined
+    // except when req.body is undefined -- hard bug to catch -- can add ensureBodyDefined in auth
   }).catch((err) =>res.status(400).send({message: err.message}))
 });
+
 
 router.post("/deleteitem", auth.ensureLoggedIn, (req, res) => {
   // match whatever frontend passed in 
@@ -82,6 +83,7 @@ router.post("/deleteitem", auth.ensureLoggedIn, (req, res) => {
     // if user found -> will update user
   }).catch((err) =>res.status(400).send({message: err.message}))
 });
+
 
 router.get("/cart", auth.ensureLoggedIn, (req, res) => {
   // findById async function; map is not
@@ -104,6 +106,15 @@ router.get("/cart", auth.ensureLoggedIn, (req, res) => {
     res.send({itemlist: allItems});
   }).catch((err) => res.status(400).send({message: err.message}))
   // doesn't restart function if error thrown
+});
+
+
+router.post("/clearcart", auth.ensureLoggedIn, (req, res) => { //why do we supply res??
+  User.findById(req.user._id).then((user) => {
+    let updatedCart = [];
+    user.cart = updatedCart;
+    user.save().then((updatedUser) => res.send(updatedUser));
+  }).catch((err) => res.status(400).send({message: err.message}))
 });
 
 

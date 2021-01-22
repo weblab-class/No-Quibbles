@@ -29,6 +29,9 @@ class NavBar extends Component {
               <Link to={"/eventsmall/"} className="NavBar-link">
                 EventsMall
               </Link>
+              <Link to={"/cart/"} className="NavBar-link">
+                Cart
+              </Link>
             </>
           )}
 
