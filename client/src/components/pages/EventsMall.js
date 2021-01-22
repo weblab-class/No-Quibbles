@@ -67,12 +67,6 @@ class EventsMall extends Component {
               <br></br>
               
             </div>
-            
-            {/* <div className="Checkout-container">
-                <section ontouchstart="" id="eventsmall">
-                <a href="/checkout/" className="btn"><span>Checkout</span></a>
-                </section>
-            </div> */}
 
             </>
         );

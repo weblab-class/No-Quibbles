@@ -7,7 +7,7 @@ class CartNewItem extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        name: "dummy",
+        name: this.props.name,
         time: 0,
       }
     }
