@@ -12,6 +12,7 @@ const express = require("express");
 // import models so we can interact with the database
 const User = require("./models/user");
 const Event = require("./models/event");
+const Item= require("./models/item");
 // const Tag = require("./models/tag");
 
 // import authentication library
@@ -54,6 +55,7 @@ router.post("/additem", auth.ensureLoggedIn, (req, res) => {
   }); 
   // saving to database
   newItem.save().then((item) => {
+    // req.user is defined since login until logout 
     User.findById(req.user._id).then((user) => {
       user.cart.push(item);
       // if user found -> will update user

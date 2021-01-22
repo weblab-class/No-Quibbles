@@ -5,14 +5,13 @@ import "./EventsMall.css";
 // import an image path instead of specifying it directly in html
 import carticon from "../../../dist/imgs/shopping-cart-icon.jpg"
 import CartEvents from "../modules/CartEvents.js"
-// array.map => list of data from database -> one-to-one array 
+// array.map => list of data from database -> one-to-one array
 
 class EventsMall extends Component {
     constructor(props) {
       super(props);
       // Initialize Default State
       this.state = {
-        user: {name: "dummy"},
         events_chosen: [],
       };
     }
@@ -20,12 +19,7 @@ class EventsMall extends Component {
     componentDidMount() {
       document.title = "Events Mall Page";
       // remember -- api calls go here!
-      get(`/api/user`).then((user) => this.setState({ user: user }));
     }
-
-    // addToCart(ind, user) {
-    //   user.cart[ind] = True;
-    // }
 
     addToCart = (event_name) => {
       let new_cart = [ ... this.state.events_chosen ];
