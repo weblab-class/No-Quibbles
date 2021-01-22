@@ -17,11 +17,12 @@ class CartItem extends Component {
       event.preventDefault();
       // const body = this.state
       const body = {
-        itemid: event._id
+        itemid: this.props.itemid
       }
       post(`/api/deleteitem`, body).then((res) => {
         // this.setState({ user: user });
         console.log(res);
+        window.location.reload(); //force refresh
       });
     }
     

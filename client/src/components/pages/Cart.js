@@ -39,7 +39,7 @@ class Cart extends Component {
     render() {
       console.log(this.state.cart);
       const cartItems = this.state.cart.map((item) => {
-          return <CartItem name={item.name} time={item.time} /> 
+          return <CartItem name={item.name} time={item.time} itemid={item._id} /> 
       })
       return (
         <>

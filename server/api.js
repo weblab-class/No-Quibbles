@@ -72,7 +72,7 @@ router.post("/deleteitem", auth.ensureLoggedIn, (req, res) => {
   Item.findByIdAndDelete(req.body.itemid).then((item) => {
     User.findById(req.user._id).then((user) => {
       let updatedCart = user.cart;
-      const itemIndex = user.cart.indexOf(item); //-1 is DNE
+      const itemIndex = user.cart.indexOf(item._id); //-1 is DNE
       if (itemIndex != -1) {
         updatedCart = updatedCart.splice(itemIndex, 1);
       } 
@@ -101,9 +101,9 @@ router.get("/cart", auth.ensureLoggedIn, (req, res) => {
     })
     // error will be thrown here unless all ready to move forward
     return Promise.all(promiseArray); 
-  }).then((allItems) => {
+  }).then((allItems) => { 
       // input to res.send has to be object
-    res.send({itemlist: allItems});
+    res.send({itemlist: allItems.filter(x => x)});//get rid of nulls
   }).catch((err) => res.status(400).send({message: err.message}))
   // doesn't restart function if error thrown
 });
