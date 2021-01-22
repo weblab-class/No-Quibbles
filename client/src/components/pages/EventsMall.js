@@ -5,6 +5,7 @@ import "./EventsMall.css";
 // import an image path instead of specifying it directly in html
 import carticon from "../../../dist/imgs/shopping-cart-icon.jpg"
 import CartEvents from "../modules/CartEvents.js"
+// array.map => list of data from database -> one-to-one array 
 
 class EventsMall extends Component {
     constructor(props) {

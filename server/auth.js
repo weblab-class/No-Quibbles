@@ -61,11 +61,15 @@ function populateCurrentUser(req, res, next) {
   next();
 }
 
+// can define more validations (validator.js) to export
+// import at api -> check endpoints
+// or do on frontend (if !this.state.name) do smth...
+
 function ensureLoggedIn(req, res, next) {
   if (!req.user) {
     return res.status(401).send({ err: "not logged in" });
   }
-
+  // predefined - similar to continue
   next();
 }
 
