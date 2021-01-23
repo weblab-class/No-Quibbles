@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const ItemSchema = new mongoose.Schema({
   name: String,
   time: Number,
+  owner_id: { ref: 'user', type: mongoose.Schema.Types.ObjectId },
 });
 
 // compile model from schema

@@ -11,6 +11,7 @@ const UserSchema = new mongoose.Schema({
   //during checkout do not take into consideration any item with 0 time_given
 
   //order history, parameters history to-do after MVP
+  sessions: [{ ref: 'shoppingsession', type: mongoose.Schema.Types.ObjectId }],
 });
 
 // compile model from schema

@@ -13,6 +13,7 @@ const express = require("express");
 const User = require("./models/user");
 const Event = require("./models/event");
 const Item= require("./models/item");
+const ShoppingSession= require("./models/shoppingsession");
 // const Tag = require("./models/tag");
 
 // import authentication library
@@ -74,7 +75,7 @@ router.post("/deleteitem", auth.ensureLoggedIn, (req, res) => {
       let updatedCart = user.cart;
       const itemIndex = user.cart.indexOf(item._id); //-1 is DNE
       if (itemIndex != -1) {
-        updatedCart = updatedCart.splice(itemIndex, 1);
+        updatedCart.splice(itemIndex, 1);
       } 
       user.cart = updatedCart;
       // if user found -> will update user
@@ -109,14 +110,31 @@ router.get("/cart", auth.ensureLoggedIn, (req, res) => {
 });
 
 
+//sets cart in user to empty array and makes a new shopping session object
 router.post("/clearcart", auth.ensureLoggedIn, (req, res) => { //why do we supply res??
   User.findById(req.user._id).then((user) => {
-    let updatedCart = [];
-    user.cart = updatedCart;
-    user.save().then((updatedUser) => res.send(updatedUser));
+    const newShoppingSession = new ShoppingSession({
+      cart: user.cart,
+      owner_id: user._id,
+    }); 
+    newShoppingSession.save().then((newSS) => {
+      let updatedCart = [];
+      user.cart = updatedCart;
+      user.sessions.push(newSS); //why can you push the entire object but only save the id?
+      user.save().then((updatedUser) => res.send({ updatedUser: updatedUser, newsession: newSS }))
+    }).catch((err) => res.status(400).send({message: err.message})); //can also do with promis, return newShoS
   }).catch((err) => res.status(400).send({message: err.message}))
 });
 
+router.get("/recentsession", auth.ensureLoggedIn, (req, res) => {
+  User.findById(req.user._id).then((user) => {  
+    let sessArr = user.sessions;
+    let lastSessId = sessArr[sessArr.length - 1];
+    ShoppingSession.findById(lastSessId).then((lastSess) => {
+    res.send( lastSess )
+    }).catch((err) => res.status(400).send({message: err.message}))
+  }).catch((err) => res.status(400).send({message: err.message}))
+});
 
 // instead of querying every time, just find 
 router.get("/user", (req, res) => {

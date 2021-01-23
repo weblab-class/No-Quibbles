@@ -15,10 +15,7 @@ class Cart extends Component {
       };
     }
   
-    handleCheckout = (res) => {
-        post(`/api/clearcart`);
-        console.log(res); //why is it not working??
-      }
+    handleCheckout = () => { post(`/api/clearcart`) }
 
     componentDidMount() {
       document.title = "Cart Page";

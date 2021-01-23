@@ -3,25 +3,35 @@ import { get } from "../../utilities";
 import "../../utilities.css";
 import "./Checkout.css";
 import "./EventsMall.css";
+import CheckoutItem from "../modules/CheckoutItem.js";
 
 class Checkout extends Component {
     constructor(props) {
       super(props);
       this.state = {
         user: {name: "dummy"},
+        lastcart: [],
       };
     }
    
     componentDidMount() {
         document.title = "Checkout Page";
         get(`/api/user`).then((user) => this.setState({ user: user }));
-        //get('/api/cart')
+        get(`/api/recentsession`).then((sess) => {
+          console.log(sess)
+          this.setState({ lastcart: sess.cart}) //do we have to pass in req?
+        });
     }
   
-    render() {
+    render() { 
+      console.log(this.state.user)
+      console.log(this.state.lastcart)
+      const checkoutItems = this.state.lastcart.map((item) => {
+        return <CheckoutItem name={item.name} time={item.time} /> 
+      })
         return (
             <>
-            {console.log(this.state.user.cart)}
+            {/* {console.log(this.state.user.cart)} */}
             <div className="Cart-container">
               <h1>Checkout complete - thanks for shopping!</h1>
               <section ontouchStart="" id="eventsmall">
@@ -55,9 +65,10 @@ class Checkout extends Component {
               </header>
               
               <section className="cart">
-                  <h2 className="cart__header">Cart:</h2>
+                  <h2 className="cart__header">You bought:</h2>
                   <ol className="list">
-                    <li className="list__item">
+                    {checkoutItems}
+                    {/* <li className="list__item">
                       <span className="list__name">Pset Night</span>
                       <span className="list__price">05:00</span>
                     </li>
@@ -68,7 +79,7 @@ class Checkout extends Component {
                     <li class="list__item">
                       <span class="list__name">Grocery Run</span>
                       <span class="list__price">01:30</span>
-                    </li>
+                    </li> */}
                   </ol>	
                   <hr className="cart__hr" />
                   <footer className="cart__total">
