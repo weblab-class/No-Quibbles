@@ -23,7 +23,11 @@ class EventsMall extends Component {
 
     addToCart = (event_name) => {
       let new_cart = [ ... this.state.events_chosen ];
-      new_cart.push(event_name);
+      let LOL = new_cart.indexOf(event_name);
+      if (LOL === -1) {
+        new_cart.push(event_name);
+      }
+      // new_cart.push(event_name);
       this.setState({
       events_chosen: new_cart,
       });

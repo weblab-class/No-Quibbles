@@ -20,10 +20,12 @@ class CartNewItem extends Component {
         name: this.state.name,
         time: this.state.time,
       }
-      post(`/api/additem`, body).then((res) => {
-        // this.setState({ user: user });
-        console.log(res);
-      });
+      if (body.time != 0) {
+        post(`/api/additem`, body).then((res) => {
+          // this.setState({ user: user });
+          console.log(res);
+        });
+      } 
     }
     
     handleChange = (event) => {

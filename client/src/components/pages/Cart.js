@@ -41,6 +41,7 @@ class Cart extends Component {
       return (
         <>
         {/* {JSON.stringify(this.props)} */}
+        <h2>Items in your cart:</h2>
         <div className="u-flexColumn">{cartItems}</div>
         <form className="CartEvents-container" onSubmit={this.handleCheckout} action="/checkout/">
           {/* if we clear cart upon submit -> will be empty? */}

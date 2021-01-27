@@ -86,6 +86,13 @@ router.post("/deleteitem", auth.ensureLoggedIn, (req, res) => {
 });
 
 
+router.get("/item", auth.ensureLoggedIn, (req, res) => {
+  Item.findById(req.query.itemid).then((item)=> {
+    res.send(item)
+  }).catch((err) => res.status(400).send({message: err.message}))
+});
+
+
 router.get("/cart", auth.ensureLoggedIn, (req, res) => {
   // findById async function; map is not
   // swim meet analogy :) 

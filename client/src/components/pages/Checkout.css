@@ -43,11 +43,14 @@
   }
   .header__meta {
     position: relative;
+    text-align: center;
     width: 90%;
     height: 100%;
-    margin-left: 15px;
+    /* margin-left: 15px; */
     line-height: 1.7rem;
     opacity: 0.3;
+    padding: 30px;
+
   }
   .header__serial {
     display: block;
