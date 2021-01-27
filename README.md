@@ -28,3 +28,8 @@ Website where you spend time quite literally to buy things on your potential to-
 - Have database of events with presorted categories
 - Have user input custom-made templates 
 - Store cart contents and custom-made templates in database for personalized experience
+
+
+Citations:
+The receipt at the checkout page is based on https://dribbble.com/shots/2738907-PayPal-Email-Receipt
+The progress circles are based on https://github.com/prasannamestha/react-gradient-progress
