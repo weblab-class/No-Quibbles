@@ -6,6 +6,8 @@ import "./EventsMall.css";
 import CheckoutItem from "../modules/CheckoutItem.js";
 import CheckoutTotal from "../modules/CheckoutTotal.js";
 
+import Progress from "../modules/Progress.js"
+
 class Checkout extends Component {
     constructor(props) {
       super(props);
@@ -53,6 +55,12 @@ class Checkout extends Component {
             </div>
             <br></br>
 
+            <div>
+              <Progress cart={this.state.lastcart}/>
+            </div>
+
+            <br></br>
+            
             {/* <link href='https://fonts.googleapis.com/css?family=Raleway:600,400' rel='stylesheet' type='text/css' /> */}
 
             <div className="receipt">
@@ -95,7 +103,7 @@ class Checkout extends Component {
                   </ol>	
                   <hr className="cart__hr" />
                   <footer className="cart__total">
-                    <h3 className="cart__total-label">Total</h3>
+                    <h3 className="cart__total-label">Total time spent</h3>
                     {/* <span className="cart__total-price">08:30</span>				 */}
                     {checkoutTotal}
                   </footer>
@@ -120,6 +128,7 @@ class Checkout extends Component {
             <div class="meter">
                 <span style="width: 25%"></span>
             </div> */}
+
             </>
         );
     }

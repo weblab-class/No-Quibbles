@@ -29,6 +29,10 @@ class Home extends Component {
                 <section className="u-textCenter">
                     <h1>Then you've come to the right place! :) </h1>
                 </section>
+                <br />
+                <section className="u-textCenter">
+                <h3>Login right away to start event-shopping in our EventsMall!</h3>
+                </section>
             </body>
             </>
         );

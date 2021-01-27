@@ -40,14 +40,6 @@ class EventsMall extends Component {
             <div className="Cart-container">
               <h1>Choose your events!</h1>
 
-              {/* <section ontouchStart="" id="eventsmall">
-              <a href="#" className="btn"><span>Add Event to DB</span></a>
-              </section> */}
-
-              {/* <section id="eventsmall">
-              <a href="/cart/" className="btn"><span><img src={carticon} /></span></a>
-              </section> */}
-
             </div>
             <br></br>
 
@@ -99,7 +91,7 @@ class EventsMall extends Component {
               </a>
 
               <a href="#" className="btn" className="tooltip" onClick= {() => this.addToCart(" Creative Project ")}><span>Creative Project</span>
-                <div className="tooltiptext">Tags: Education, Education</div>
+                <div className="tooltiptext">Tags: Education, Entertainment</div>
               </a>
             
             <br></br>
@@ -109,6 +101,14 @@ class EventsMall extends Component {
 
             <h3>Enter the minutes you want to spend on your chosen events: </h3>
             <CartEvents cartEvents={this.state.events_chosen} />
+            <br />
+            <div>
+              <h3>See what you've already added:</h3>
+              <section ontouchStart="" id="eventsmall">
+              <a href="/cart/" className="btn"><span>Show me my cart!</span></a>
+              </section>
+              
+            </div>
 
             </>
         );

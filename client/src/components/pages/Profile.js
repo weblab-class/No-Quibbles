@@ -27,7 +27,7 @@ class Profile extends Component {
       return (
         <>
         <body id="profile">
-          <h1 className="Profile-name u-textCenter">{this.state.user.name}</h1>
+          <h1 className="Profile-name u-textCenter">Hello, {this.state.user.name}!</h1>
           <hr className="Profile-line" />
           <div className="u-flex">
 
@@ -36,6 +36,13 @@ class Profile extends Component {
               <div id="profile-description">
                 It's so lonely in here... go budget your day! ⏱️
               </div>
+              
+            <div className="Cart-container">
+              <section ontouchStart="" id="eventsmall">
+              <a href="/eventsmall/" className="btn"><span>Start Shopping</span></a>
+              </section>
+            </div>
+
             </div>
             
             <div className="Profile-statsContainer">
