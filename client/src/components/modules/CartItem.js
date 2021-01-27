@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { post } from "../../utilities.js";
 import "../../utilities.css";
 import "./CartItem.css";
+import "../pages/Cart.css";
 
 class CartItem extends Component {
     constructor(props) {
@@ -36,8 +37,8 @@ class CartItem extends Component {
             
           <form className="CartItem-container" onSubmit={this.handleDelete} >
               <span>{this.props.name}......</span>
-              <span>{this.props.time}</span>
-              <button type="submit">Delete!</button> 
+              <span>{this.props.time} min</span>
+              <button className="myButton-small" type="submit">Delete!</button> 
           </form> 
 
         </div>

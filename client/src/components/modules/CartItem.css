@@ -1,4 +1,9 @@
 .CartItem-container {
     display: flex;
     justify-content: space-around;
+    text-decoration: none;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border-radius: 10px;
+    transition: padding 0.1s, box-shadow 0.1s, top 0.1s;
 }

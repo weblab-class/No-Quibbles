@@ -27,7 +27,9 @@ class CartEvents extends Component {
       return (
         <>
         {/* {JSON.stringify(this.props)} */}
+      <div className="AllEvents-container">  
         {cartItems}
+      </div>
         </>
       );
     }

@@ -1,10 +1,20 @@
   .CartEvents-container {
     border: var(--darkgrey) 5px solid;
-    border-radius: var(--xs);
-    background-color:blanchedalmond;
+    border-radius: var(--s);
+    background-color:rgb(151, 220, 235);
     display: flex;
     flex-basis: 0;
     /* margin-top: var(--m); */
+  }
+
+  .AllEvents-container{
+    display: flex;
+    background-color: var(--transparent);
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    margin-top: var(--m);
+    grid-gap: 20px;
   }
   
   /* .CatHappiness-container:first-of-type {
@@ -13,13 +23,13 @@
   .Cart-title {
     padding: var(--m) var(--l);
     font-size: 15pt;
-    color:grey;
+    color: black;
   }
   
   .Cart-event {
     padding: var(--m) var(--l);
     font-size: 10pt;
-    color:grey;
+    color: black;
   }
   
   /* .CatHappiness-storyContent {

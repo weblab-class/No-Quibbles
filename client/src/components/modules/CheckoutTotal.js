@@ -11,17 +11,7 @@ class CheckoutTotal extends Component {
       }
     }
     
-    // componentDidMount() {
-    //     let cart = this.props.cart;
-    //     console.log(this.props.cart);
-    //     let newTime = 0;
-    //     for (let i=0; i<cart.length; i++) {
-    //         get(`/api/item`, {itemid: cart[i]}).then((item) => {
-    //           console.log(item)
-    //             newTime = newTime + item.time;
-    //     })
-    //     this.setState({ totalTime: newTime });  
-    // }}
+    // componentDidMount() => doesn't work because only runs once
   
     componentDidUpdate(prevProps) {
       if (this.props.cart && this.props.cart !== prevProps.cart) {
@@ -43,7 +33,7 @@ class CheckoutTotal extends Component {
         console.log(this.state.totalTime);
       return (
         <>
-        <span className="cart__total-price">{this.state.totalTime}</span>
+        <span className="cart__total-price">{this.state.totalTime} min</span>
         </>
       );
     }

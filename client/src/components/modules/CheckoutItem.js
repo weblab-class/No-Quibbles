@@ -23,7 +23,7 @@ class CheckoutItem extends Component {
           <>
         <li className="list__item">
             <span className="list__name">{this.state.name}</span>
-            <span className="list__price">{this.state.time}</span>
+            <span className="list__price">{this.state.time} min</span>
         </li>
         </>
       );

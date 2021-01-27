@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { post } from "../../utilities.js";
 import "../../utilities.css";
 import "./CartNewItem.css";
+import "../pages/Cart.css";
 
 class CartNewItem extends Component {
     constructor(props) {
@@ -46,11 +47,6 @@ class CartNewItem extends Component {
             
           <form className="CartEvents-container u-flexColumn" onSubmit={this.handleSubmit} >
               <div className="Cart-event u-flex-alignCenter">
-                {/* <label htmlFor="event-select u-flex-alignCenter">Add to cart:</label> */}
-              {/* <select id="event-select">
-              {this.props.cartEvents.map((x, i) => <option key={i}>{x}</option>
-              )}
-              </select> */}
               Name: 
               <br></br>
               <input type="text" value={this.props.name} disabled />
@@ -60,8 +56,8 @@ class CartNewItem extends Component {
               <br></br>
               <input type="text" value={this.state.time} onChange={this.handleChange} />
               </div>
-              <button type="submit">Add to Cart!</button> 
-            </form> 
+              <button className="myButton" type="submit">Add to Cart!</button> 
+          </form> 
 
         </div>
         </>
